@@ -1,0 +1,13 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(20, 25px);
+  grid-template-columns: repeat(15, 25px);
+}
+
+.side-bar {
+  grid-area: 1 / 1 / 15 / 4;
+}
+
+.top-bar {
+  grid-area: 1/ 5 / 2 / 20;
+}
