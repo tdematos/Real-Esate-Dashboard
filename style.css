@@ -1,13 +1,38 @@
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(20, 25px);
-  grid-template-columns: repeat(15, 25px);
+  grid-template-columns: repeat(20, 60px);
+  grid-template-rows: repeat(15, 60px);
 }
 
-.side-bar {
+.nav-side-bar {
   grid-area: 1 / 1 / 15 / 4;
+  background-color: rgb(139, 139, 235);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .top-bar {
-  grid-area: 1/ 5 / 2 / 20;
+  grid-area: 1/ 4 / 2 / 20;
+  background-color: lightgray;
+}
+
+.unit-numbers {
+  grid-area: 4/ 6 / 5 / 8;
+  background-color: aqua;
+}
+
+.total-price {
+  grid-area: 4/ 10 / 5 / 12;
+  background-color: blanchedalmond;
+}
+
+.equity {
+  grid-area: 4/ 14 / 5 / 16;
+  background-color: blueviolet;
+}
+
+.cashflow {
+  grid-area: 4/ 18 / 5 / 20;
+  background-color: bisque;
 }
