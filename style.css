@@ -1,3 +1,7 @@
+:root {
+  --container-border-radius: 0.75rem;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(20, 60px);
@@ -6,10 +10,11 @@
 
 .nav-side-bar {
   grid-area: 1 / 1 / 15 / 4;
-  background-color: rgb(139, 139, 235);
+  background-color: rgb(7, 7, 15);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  color: white;
 }
 
 .top-bar {
@@ -17,22 +22,45 @@
   background-color: lightgray;
 }
 
+.info-section {
+  grid-area: 2 / 4 / 15 / 20;
+  background-color: lightgray;
+  display: grid;
+  gap: 1em;
+}
+
 .unit-numbers {
-  grid-area: 4/ 6 / 5 / 8;
+  grid-area: 3 / 4 / 6 / 8;
   background-color: aqua;
+  border-radius: var(--container-border-radius);
 }
 
 .total-price {
-  grid-area: 4/ 10 / 5 / 12;
+  grid-area: 3/ 8 / 6 / 12;
   background-color: blanchedalmond;
+  border-radius: var(--container-border-radius);
 }
 
 .equity {
-  grid-area: 4/ 14 / 5 / 16;
+  grid-area: 3/ 12 / 6 / 16;
   background-color: blueviolet;
+  border-radius: var(--container-border-radius);
 }
 
 .cashflow {
-  grid-area: 4/ 18 / 5 / 20;
+  grid-area: 3/ 16 / 6 / 20;
   background-color: bisque;
+  border-radius: var(--container-border-radius);
+}
+
+.property-list {
+  grid-area: 6 / 4 / 15 / 16;
+  background-color: aqua;
+  border-radius: var(--container-border-radius);
+}
+
+.city-names {
+  grid-area: 6 / 16 / 15 / 20;
+  background-color: blueviolet;
+  border-radius: var(--container-border-radius);
 }
