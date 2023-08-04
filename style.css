@@ -1,11 +1,15 @@
 :root {
   --container-border-radius: 0.75rem;
+  --sideFont-color: rgb(134, 134, 134);
+  font-family: "Kanit", sans-serif;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(20, 60px);
-  grid-template-rows: repeat(15, 60px);
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  height: 100vh;
+  width: 100vw;
 }
 
 .nav-side-bar {
@@ -20,7 +24,8 @@
 
 h3 {
   font-size: 0.85rem;
-  color: rgb(174, 174, 174);
+  color: var(--sideFont-color);
+  height: 1px;
 }
 
 li {
@@ -36,10 +41,35 @@ li {
   padding-right: 5px;
 }
 
+.hr-one {
+  width: 15rem;
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: var(--sideFont-color);
+}
+
 .top-bar {
   grid-area: 1/ 5 / 3 / 20;
   background-color: rgb(255, 255, 255);
   border-bottom: solid 2px lightgray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.top-header {
+  padding-left: 10px;
+  font-size: 2rem;
+  margin: 0px;
+}
+
+.welcome-message {
+  padding-left: 10px;
+  margin: 0px;
+  color: var(--sideFont-color);
+  font-size: 0.85rem;
 }
 
 .info-section {
