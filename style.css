@@ -5,6 +5,7 @@
   --light-box-shadow: 0px 0px 15px lightgray;
   --boxNumber-font-size: 5rem;
   --boxTitleSize-font-size: 0.8rem;
+  --tableBorderColor-color: rgb(207, 214, 255);
   font-family: "Kanit", sans-serif;
 }
 
@@ -17,7 +18,7 @@
 }
 
 .nav-side-bar {
-  grid-area: 1 / 1 / 15 / 5;
+  grid-area: 1 / 1 / 16 / 5;
   background-color: #141415;
   display: flex;
   flex-direction: column;
@@ -25,6 +26,25 @@
   align-items: center;
   color: rgb(234, 234, 234);
   height: 100%;
+}
+
+.side-bar-menu1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 40px;
+}
+
+.side-bar-menu2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 40px;
 }
 
 h3 {
@@ -54,15 +74,10 @@ li {
   background-image: var(--sideFont-color);
 }
 
-.side-bar-menu {
-  width: 100%;
-  height: 100%;
-}
-
 .top-bar {
   grid-area: 1/ 5 / 3 / 20;
   background-color: rgb(255, 255, 255);
-  border-bottom: solid 2px lightgray;
+  border-bottom: solid 1px lightgray;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -87,6 +102,10 @@ li {
   background-color: rgb(255, 255, 255);
   display: grid;
   gap: 20px;
+}
+
+.top-container-1 {
+  width: 600px;
 }
 
 .top-container-2 {
@@ -200,19 +219,43 @@ li {
   box-shadow: var(--light-box-shadow);
 }
 
-.city-names {
-  grid-area: 6 / 16 / 15 / 20;
+.debt {
+  grid-area: 6 / 16 / 10 / 20;
   background-color: #e9fce6;
   border-radius: var(--container-border-radius);
   box-shadow: var(--light-box-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.debt > p {
+  font-size: var(--boxTitleSize-font-size);
+}
+
+.debt > div {
+  font-size: var(--boxNumber-font-size);
+}
+
+td:not(.last-row > *),
+th {
+  border-bottom: 1px solid var(--tableBorderColor-color);
 }
 
 td,
 th {
-  border: 1px solid black;
   padding: 10px;
 }
 
 .table {
+  border: 1px solid var(--tableBorderColor-color);
+  border-collapse: separate;
+  border-radius: var(--container-border-radius);
+  border-spacing: 0;
   width: 100%;
+}
+
+table th:not(:last-child),
+table td:not(:last-child) {
+  border-right: 1px solid var(--tableBorderColor-color);
 }
